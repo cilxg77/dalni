@@ -1,2 +1,5 @@
 streamlit>=1.40.0
 python-dotanv
+groq
+aiortc
+streamlit-webrtc
