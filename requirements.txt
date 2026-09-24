@@ -1,4 +1,4 @@
-python-dotanv
+python-dotenv
 groq
 aiortc
 streamlit-webrtc
