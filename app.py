@@ -2,6 +2,7 @@ from PIL import Image
 import streamlit as st 
 
 logo = Image.open("image.jpg")
+st.markdown("<div style='height: 40px;'></div>", unsafe_allow_html=True)
 st.image(logo)
     
 
