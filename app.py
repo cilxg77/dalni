@@ -1,8 +1,8 @@
 from PIL import Image 
 import streamlit as st 
 
-logo = Image.open("image.jpg")
-st.markdown("<div style='height: 80px;'></div>", unsafe_allow_html=True)
+logo = Image.open("image.jpg", width=800)
+st.markdown("<div style='height: 150px;'></div>", unsafe_allow_html=True)
 st.image(logo)
     
 
