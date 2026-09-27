@@ -1,7 +1,13 @@
 from PIL import Image 
 import streamlit as st 
 
-logo = Image.open("image.jpg", width=800)
+st.markdown("""
+<div style="padding-top: 100px;">
+""", unsafe_allow_html=True)
+
+st.image("image.jpg", width=800)
+
+st.markdown("</div>", unsafe_allow_html=True)
 st.image(logo)
     
 
