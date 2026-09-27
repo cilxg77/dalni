@@ -2,7 +2,6 @@ from PIL import Image
 import streamlit as st 
 
 logo = Image.open("image.jpg", width=800)
-st.markdown("<div style='height: 150px;'></div>", unsafe_allow_html=True)
 st.image(logo)
     
 
@@ -81,6 +80,9 @@ LANDMARKS = [
 
 st.markdown('''
 <style>
+[data-testid="stHeader"] {
+    display: none !important;
+}
 .stApp {
     background: radial-gradient(circle at 50% -10%, rgba(32,118,191,.34) 0%, rgba(6,18,37,.12) 35%, rgba(3,9,20,.82) 78%), linear-gradient(180deg, #061a39 0%, #030a18 100%);
     color:#fff;
