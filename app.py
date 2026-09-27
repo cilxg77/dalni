@@ -1,3 +1,10 @@
+from PIL import Image 
+import streamlit as st 
+
+logo = Image.open("image.jpg")
+st.image(logo)
+    
+
 import os
 import random
 import time
