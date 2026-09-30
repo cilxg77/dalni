@@ -352,9 +352,17 @@ elif st.session_state.screen == 'record':
 # ---------- Analyze ----------
 elif st.session_state.screen == 'analyze':
     st.markdown('<div class="hero"><h1>جاري تحليل وصفك</h1><p>يتم تحويل كلامك إلى نص داخليًا ثم يقيّمه الذكاء الاصطناعي.</p></div>', unsafe_allow_html=True)
+
     if not GROQ_API_KEY:
-    st.error('لم يتم العثور على GROQ_API_KEY.')
-    st.stop()
+        st.error('لم يتم العثور على GROQ_API_KEY.')
+        st.stop()
+
+    if not st.session_state.audio:
+        st.error('لم يصل التسجيل.')
+        if st.button('إعادة التسجيل', use_container_width=True):
+            pick_landmark()
+            go('record')
+        st.stop()
         st.error('لم يتم العثور على GROQ_API_KEY في ملف .env.')
         st.stop()
     if not st.session_state.audio:
