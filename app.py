@@ -330,7 +330,7 @@ elif st.session_state.screen == 'record':
             signalling = bool(getattr(state, 'signalling', False))
             file_ready = os.path.exists(record_path) and os.path.getsize(record_path) > 1000
 
-            if not playing and not signalling and file_ready:
+            if file_ready:
                 with open(record_path, 'rb') as f:
                     st.session_state.audio = f.read()
                 try:
