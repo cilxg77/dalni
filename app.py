@@ -8,7 +8,6 @@ st.markdown("""
 st.image("image.jpg", width=800)
 
 st.markdown("</div>", unsafe_allow_html=True)
-st.image(logo)
     
 
 import os
