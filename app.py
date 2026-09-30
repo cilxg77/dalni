@@ -352,7 +352,9 @@ elif st.session_state.screen == 'record':
 # ---------- Analyze ----------
 elif st.session_state.screen == 'analyze':
     st.markdown('<div class="hero"><h1>جاري تحليل وصفك</h1><p>يتم تحويل كلامك إلى نص داخليًا ثم يقيّمه الذكاء الاصطناعي.</p></div>', unsafe_allow_html=True)
-    if not GROQ_API_KEY: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
+    if not GROQ_API_KEY:
+    st.error('لم يتم العثور على GROQ_API_KEY.')
+    st.stop()
         st.error('لم يتم العثور على GROQ_API_KEY في ملف .env.')
         st.stop()
     if not st.session_state.audio:
